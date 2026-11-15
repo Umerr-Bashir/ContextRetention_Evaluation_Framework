@@ -1,0 +1,88 @@
+[
+    {
+        "approach": "Full Document",
+        "scores": {
+            "faithfulness": 4,
+            "completeness": 4,
+            "entity_accuracy": 5,
+            "relevance": 5,
+            "conciseness": 4
+        },
+        "overall_assessment": "The summary is largely accurate and captures the essential points of the original document, but it could benefit from slightly more detail in certain areas.",
+        "strengths": [
+            "Accurately identifies the shift from profit maximization to wealth maximization as a key concept.",
+            "Includes relevant theories of capital structure and financial management principles.",
+            "Correctly lists various types of financial instruments and their characteristics."
+        ],
+        "weaknesses": [
+            "The summary could include more specific details about the functions of financial management, such as capital budgeting and working capital management.",
+            "Some minor details about the definitions of financial management by various authors are omitted, which could enhance completeness."
+        ],
+        "findings": [
+            {
+                "issue_type": "missing_information",
+                "severity": "medium",
+                "summary_excerpt": "The summary could include more specific details about the functions of financial management, such as capital budgeting and working capital management.",
+                "source_evidence": "The original document discusses investment decisions, financing decisions, and dividend decisions in detail.",
+                "explanation": "While the summary mentions key functions, it does not elaborate on the specifics of capital budgeting and working capital management, which are important aspects of financial management."
+            },
+            {
+                "issue_type": "missing_information",
+                "severity": "medium",
+                "summary_excerpt": "Some minor details about the definitions of financial management by various authors are omitted.",
+                "source_evidence": "The original document provides definitions from multiple authors, which are significant for understanding financial management.",
+                "explanation": "Including these definitions would provide a more comprehensive understanding of the concept of financial management."
+            }
+        ],
+        "judge_latency": 11.513814199948683,
+        "judge_input_tokens": 18413,
+        "judge_output_tokens": 320,
+        "estimated_cost_usd": 0.00295395
+    },
+    {
+        "approach": "Map-Reduce",
+        "scores": {
+            "faithfulness": 3,
+            "completeness": 4,
+            "entity_accuracy": 4,
+            "relevance": 4,
+            "conciseness": 4
+        },
+        "overall_assessment": "The summary provides a good overview of the original document, capturing key concepts and entities related to financial management and international finance. However, it lacks some specific details and examples that would enhance its completeness and faithfulness to the source material.",
+        "strengths": [
+            "Covers major concepts of financial management, capital structure, and international finance.",
+            "Includes relevant entities and their descriptions, enhancing understanding of key terms."
+        ],
+        "weaknesses": [
+            "Lacks specific examples and details from the original document that would provide a deeper understanding of the concepts.",
+            "Some important theories and models mentioned in the original document are not elaborated upon in the summary."
+        ],
+        "findings": [
+            {
+                "issue_type": "missing_information",
+                "severity": "medium",
+                "summary_excerpt": "The summary lacks specific details about the various financial management theories and models discussed in the original document.",
+                "source_evidence": "The original document discusses theories such as the Modigliani-Miller Hypothesis and the Traditional Approach in detail.",
+                "explanation": "These theories are crucial for understanding capital structure and should have been included in the summary."
+            },
+            {
+                "issue_type": "missing_information",
+                "severity": "medium",
+                "summary_excerpt": "The summary does not mention specific financial instruments like bonds, debentures, and their characteristics.",
+                "source_evidence": "The original document provides detailed descriptions of various financial instruments, including bonds and debentures.",
+                "explanation": "Including these details would enhance the completeness of the summary."
+            },
+            {
+                "issue_type": "unsupported_claim",
+                "severity": "low",
+                "summary_excerpt": "The summary states that 'the foreign exchange market operates under various mechanisms and regulatory frameworks.'",
+                "source_evidence": "While the original document mentions the Foreign Exchange Management Act (FEMA) and the Reserve Bank of India, it does not elaborate on the mechanisms of the foreign exchange market.",
+                "explanation": "The claim about the mechanisms is too broad and not directly supported by specific details from the original document."
+            }
+        ],
+        "judge_latency": 8.376387499971315,
+        "judge_input_tokens": 18410,
+        "judge_output_tokens": 404,
+        "estimated_cost_usd": 0.0030039
+    }
+]

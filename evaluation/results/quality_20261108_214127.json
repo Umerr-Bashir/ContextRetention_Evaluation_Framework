@@ -1,0 +1,70 @@
+[
+    {
+        "approach": "Full Document",
+        "scores": {
+            "faithfulness": 5,
+            "completeness": 5,
+            "entity_accuracy": 5,
+            "relevance": 5,
+            "conciseness": 5
+        },
+        "overall_assessment": "The summary accurately captures the key points, concepts, and entities from the original document while maintaining factual correctness and relevance.",
+        "strengths": [
+            "The summary effectively highlights the shift from profit maximization to wealth maximization as the primary objective of financial management.",
+            "It includes a comprehensive overview of the functions of financial management, such as investment, financing, and dividend decisions.",
+            "Key entities and their contributions to financial management are accurately represented.",
+            "The summary addresses risks associated with financial management, such as overtrading and foreign exchange exposure."
+        ],
+        "weaknesses": [],
+        "findings": [],
+        "judge_latency": 4.1242373999994015,
+        "judge_input_tokens": 18413,
+        "judge_output_tokens": 145
+    },
+    {
+        "approach": "Map-Reduce",
+        "scores": {
+            "faithfulness": 2,
+            "completeness": 3,
+            "entity_accuracy": 3,
+            "relevance": 4,
+            "conciseness": 4
+        },
+        "overall_assessment": "The summary captures some key concepts from the original document but lacks specific details and accuracy in certain areas, leading to a moderate overall evaluation.",
+        "strengths": [
+            "The summary identifies key concepts such as financial management, capital structure, and international finance.",
+            "It provides a clear structure and categorization of information, making it easy to follow."
+        ],
+        "weaknesses": [
+            "The summary lacks specific definitions and examples from the original document, which diminishes its factual accuracy.",
+            "Some important details, such as specific theories and their implications, are omitted or generalized, leading to a loss of depth.",
+            "Entity descriptions are somewhat vague and do not fully reflect the original document's content."
+        ],
+        "findings": [
+            {
+                "issue_type": "missing_information",
+                "severity": "high",
+                "summary_excerpt": "It highlights the relationships between different financial concepts and their implications for firms, while also addressing associated risks and concerns.",
+                "source_evidence": "The original document contains detailed definitions and examples of financial management, capital structure theories, and specific risks associated with international finance.",
+                "explanation": "The summary does not include specific theories like the Modigliani-Miller Hypothesis or the Traditional Approach, which are crucial for understanding capital structure."
+            },
+            {
+                "issue_type": "unsupported_claim",
+                "severity": "medium",
+                "summary_excerpt": "This analysis consolidates key concepts from various documents related to financial management, capital structure, portfolio management, international finance, and foreign exchange.",
+                "source_evidence": "The original document is a single source focused on financial management and does not consolidate multiple documents.",
+                "explanation": "The claim that the summary consolidates key concepts from various documents is unsupported as the original document is singular."
+            },
+            {
+                "issue_type": "entity_error",
+                "severity": "medium",
+                "summary_excerpt": "The foreign exchange market operates under various mechanisms and regulatory frameworks, with institutions like the Reserve Bank of India and the Foreign Exchange Management Act (FEMA) playing crucial roles.",
+                "source_evidence": "The original document discusses the Foreign Exchange Management Act (FEMA) but does not explicitly state that it operates under various mechanisms and regulatory frameworks.",
+                "explanation": "The summary's assertion about the operational mechanisms of the foreign exchange market is not explicitly supported by the original document."
+            }
+        ],
+        "judge_latency": 10.585709400002088,
+        "judge_input_tokens": 18410,
+        "judge_output_tokens": 456
+    }
+]

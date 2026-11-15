@@ -1,0 +1,3 @@
+approach,wall_latency_seconds,reported_request_latency_seconds,input_tokens,output_tokens,total_tokens,estimated_cost_usd,request_count,chunks_processed,json_valid,schema_valid,summary_characters
+Full Document,8.839,8.247806800005492,17454,650,18104,0.0030081,1,1,True,False,3817
+Map-Reduce,50.407,50.38126489997376,23715,4336,28051,0.00615885,9,8,True,False,3045
