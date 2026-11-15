@@ -17,39 +17,29 @@ The evaluation shows that full context is more precise, keeps context intact, an
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    PDF("Input PDF document")
-    APP("app.py")
-
-    EXTRACT("analyzer.extract_text")
-    SPLIT("chunking.chunk_text")
-    FULL("full_document_summarization")
-    MAP("map_reduce_summarization")
-    LLM("llm.llm_request")
-    PROMPTS("prompts.py")
-    SCHEMA("schemas.DocumentAnalysis")
-    BENCH("evaluation.benchmark.run_benchmark")
-    JUDGE("evaluation.run_quality_evaluation")
-    REPORTS("evaluation/results CSV and JSON")
-
-    PDF --> APP
-    APP --> EXTRACT
-    EXTRACT --> FULL
-    EXTRACT --> MAP
-
-    FULL --> LLM
-    MAP --> SPLIT
-    SPLIT --> LLM
-    LLM --> SCHEMA
-    LLM --> PROMPTS
-
-    FULL --> BENCH
-    MAP --> BENCH
-    BENCH --> REPORTS
-
-    BENCH --> JUDGE
-    JUDGE --> REPORTS
+```text
+Input PDF document
+    |
+    v
+app.py
+    |
+    v
+analyzer.extract_text
+    |
+    +--> full_document_summarization --> llm.llm_request --> schemas.DocumentAnalysis
+    |
+    +--> map_reduce_summarization --> chunking.chunk_text --> llm.llm_request --> schemas.DocumentAnalysis
+    |
+    v
+evaluation.benchmark.run_benchmark
+    |
+    +--> evaluation/results CSV and JSON
+    |
+    v
+evaluation.run_quality_evaluation
+    |
+    v
+evaluation/results CSV and JSON
 ```
 
 ## Quality Evaluation
